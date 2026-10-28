@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sufian Choudhury · Portfolio</title>
+    <meta name="description" content="Sufian Choudhury, full-stack developer and Computer Science student at KL University. Projects in security, AI and the web, and how to get in touch." />
+    <meta name="theme-color" content="#000000" />
+    <meta property="og:title" content="Sufian Choudhury · Portfolio" />
+    <meta property="og:description" content="Full-stack developer. Selected projects, about me and how to get in touch." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <noscript>
+      <style>
+        body.is-intro { overflow: auto; }
+        body.is-intro .nav, body.is-intro .hero__title, body.is-intro .hero__meta, [data-reveal] { opacity: 1; transform: none; }
+        .hero__title { background: linear-gradient(180deg, #fff 0%, #f2f3f6 30%, #b6bbc5 70%, #7c828e 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .hero__skip { display: none; }
+        .hero__fallback { display: block; }
+      </style>
+    </noscript>
+  </head>
+  <body class="is-intro">
+    <a class="skip-link" href="#about">Skip to content</a>
+
+    <header class="nav">
+      <a class="nav__brand" href="#top">Sufian Choudhury</a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="#top" class="is-active">Home</a>
+        <a href="#about">About</a>
+        <a href="#work">Projects</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    </header>
+
+    <div class="menu" id="menu" hidden>
+      <a href="#top">Home</a>
+      <a href="#about">About</a>
+      <a href="#work">Projects</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <main>
+      <!-- data-intro-name morphs into the title. Its "I" drops in as the "!" bar. -->
+      <section class="hero" id="top" data-intro-name="SUFIAN">
+        <canvas class="hero__canvas" aria-hidden="true"></canvas>
+        <img class="hero__fallback" src="./photos/portrait-cutout.png" alt="" aria-hidden="true" />
+        <div class="hero__bottom">
+          <h1 class="word hero__title" aria-label="Portfolio of Sufian Choudhury">PORTFOLIO</h1>
+          <div class="hero__meta">
+            <p class="hero__role"><strong>Full-Stack</strong> <em>Developer</em></p>
+            <a class="hero__contact" href="#contact"><i aria-hidden="true"></i>Contact</a>
+          </div>
+        </div>
+        <button class="hero__skip" type="button">Skip intro</button>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="about__head">
+          <p class="eyebrow" data-reveal>About me</p>
+          <h2 class="display silver" data-reveal>Intro</h2>
+        </div>
+        <div class="card about__card" data-reveal>
+          <figure class="about__photo">
+            <img src="./photos/headshot-about.jpg" alt="Portrait of Sufian Choudhury" width="880" height="1100" loading="lazy" />
+          </figure>
+          <div class="about__text">
+            <p>
+              Hey, I'm <b>Sufian</b>. A <b>full-stack developer</b> and Computer Science student at
+              <b>KL University</b>, specializing in <b>cybersecurity</b>. As an engineering intern at <b>Espaze.in</b>,
+              I built an image compression service for <b>Google Cloud</b>.
+            </p>
+            <p>
+              I build full-stack and <b>AI</b> projects with Spring Boot, React, Python and LangChain. Outside code,
+              I'm Outreach Lead at <b>KL-CIIE</b>, where I led our team to <b>1st Prize at EDD Enigma</b> and 3rd at the
+              EDD Conference, organized by IIT Madras.
+            </p>
+            <a class="about__cta" href="#contact">Get in touch <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section work" id="work">
+        <header class="section__head">
+          <p class="eyebrow" data-reveal>Selected work</p>
+          <h2 class="display silver" data-reveal>Projects</h2>
+        </header>
+        <ol class="projects">
+          <li class="project" data-reveal>
+            <a href="https://github.com/sufianabcy/behavioral-detection-engine" target="_blank" rel="noopener">
+              <span class="project__num">01</span>
+              <span class="project__title">Behavioral Threat Intelligence</span>
+              <span class="project__desc">
+                Simulates MITRE ATT&amp;CK-style attacks (PowerShell macros, WMI lateral movement, certutil abuse) next
+                to normal activity, scores every event with a behavioral detection engine that correlates activity per
+                host, and raises alerts on a live SOC dashboard.
+              </span>
+              <span class="project__tags">Python · FastAPI · React · MITRE ATT&amp;CK</span>
+              <span class="project__arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li class="project" data-reveal>
+            <a href="https://github.com/sufianabcy/Admission-Assistance" target="_blank" rel="noopener">
+              <span class="project__num">02</span>
+              <span class="project__title">EduPilot</span>
+              <span class="project__desc">
+                An AI admissions counsellor for engineering aspirants in India. Set your exam, rank, budget, state and
+                branch, then chat with an agent that returns full, ranked college lists with deadlines and details.
+              </span>
+              <span class="project__tags">Python · LangGraph · LangChain · Groq · ChromaDB · Streamlit</span>
+              <span class="project__arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li class="project" data-reveal>
+            <a href="https://github.com/sufianabcy/scheduler" target="_blank" rel="noopener">
+              <span class="project__num">03</span>
+              <span class="project__title">Planner</span>
+              <span class="project__desc">
+                A daily planner with monthly goals and step-by-step projects. Quick add understands lines like
+                “gym tomorrow 7am every mon wed p1”, and it installs as an app on Android and Mac.
+              </span>
+              <span class="project__tags">Preact · Express · Web Push · AWS</span>
+              <span class="project__arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section stack" id="stack">
+        <header class="section__head">
+          <p class="eyebrow" data-reveal>What I build with</p>
+          <h2 class="display silver" data-reveal>Stack</h2>
+        </header>
+        <div class="stack__groups">
+          <div class="stack__group" data-reveal>
+            <h3>Backend</h3>
+            <p>Java · Spring Boot · Node.js · Express · Elasticsearch</p>
+          </div>
+          <div class="stack__group" data-reveal>
+            <h3>Frontend</h3>
+            <p>React · JavaScript · HTML &amp; CSS</p>
+          </div>
+          <div class="stack__group" data-reveal>
+            <h3>AI &amp; ML</h3>
+            <p>Python · LangChain · LangGraph · Machine Learning</p>
+          </div>
+          <div class="stack__group" data-reveal>
+            <h3>Cloud &amp; Blockchain</h3>
+            <p>AWS · GCP · Solidity · Ethereum</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <p class="eyebrow" data-reveal>Contact</p>
+        <h2 class="display silver" data-reveal>Let's talk</h2>
+        <p class="contact__lead" data-reveal>Have a project, an internship or an idea? My inbox is open.</p>
+        <a class="contact__mail" href="mailto:contact.sufianchoudhury@gmail.com" data-reveal>contact.sufianchoudhury@gmail.com</a>
+        <ul class="contact__links" data-reveal>
+          <li><a href="https://www.linkedin.com/in/sufian0/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://github.com/sufianabcy" target="_blank" rel="noopener">GitHub ↗</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2026 Sufian Choudhury</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

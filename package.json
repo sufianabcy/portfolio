@@ -1,0 +1,19 @@
+{
+  "name": "sufian-portfolio",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/montserrat": "^5.3.0",
+    "gsap": "^3.15.0"
+  },
+  "devDependencies": {
+    "vite": "^8.3.5"
+  }
+}
