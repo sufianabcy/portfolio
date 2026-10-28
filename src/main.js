@@ -42,6 +42,7 @@ async function boot() {
     });
 
   setupMenu();
+  setupNavBackground();
   setupActiveLink();
   setupReveal();
   setupScatter(particles, () => portrait?.invalidate());
@@ -78,6 +79,13 @@ function setupMenu() {
   toggle.addEventListener('click', () => set(menu.hidden));
   menu.addEventListener('click', (e) => e.target.closest('a') && set(false));
   addEventListener('keydown', (e) => e.key === 'Escape' && !menu.hidden && set(false));
+}
+
+// The nav gets a solid backing once content scrolls under it.
+function setupNavBackground() {
+  const update = () => nav.classList.toggle('is-scrolled', scrollY > 40);
+  addEventListener('scroll', update, { passive: true });
+  update();
 }
 
 function setupActiveLink() {

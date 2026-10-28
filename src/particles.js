@@ -281,8 +281,11 @@ function sample(img, cell, max) {
     const l = Math.min(1, Math.max(0, lum[i] + (lum[i] - fine[i]) * 0.9 + (lum[i] - broad[i]) * 0.5));
     // Below the chin a white shirt would soak up the particles the face needs.
     const body = i / w / h > 0.62 ? 0.6 : 1;
+    // Soften the photo's cropped left and right edges.
+    const x = (i % w) / w;
+    const sides = smoothstep(0, 0.12, x) * smoothstep(0, 0.12, 1 - x);
     bright[i] = l;
-    density[i] = alpha[i] * body * (0.03 + 0.97 * Math.pow(smoothstep(0.04, 0.86, l), 1.2));
+    density[i] = alpha[i] * body * sides * (0.03 + 0.97 * Math.pow(smoothstep(0.04, 0.86, l), 1.2));
     mass += density[i];
   }
 
